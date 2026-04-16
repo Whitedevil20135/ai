@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: telegram-voice-assistant-frontend
+    runtime: node
+    buildCommand: npm run build
+    startCommand: npm start
+    env:
+      - key: REACT_APP_BACKEND_URL
+        value: https://telegram-voice-assistant-backend.onrender.com
