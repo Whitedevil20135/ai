@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: telegram-voice-assistant-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    env: 
+      - key: TELEGRAM_TOKEN
+        value: your_telegram_token
+      - key: OPENAI_API_KEY
+        value: your_openai_api_key
+      - key: JWT_SECRET
+        value: your_jwt_secret
+      - key: PORT
+        value: 10000
+    healthCheck:
+      path: /health
+      intervalSeconds: 30
+      timeoutSeconds: 5
+      successStatuses: [200]
+      failedChecksBeforeUnhealthy: 5
