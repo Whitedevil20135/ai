@@ -3,8 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import io from 'socket.io-client';
 import { jwtDecode } from 'jwt-decode';
 import './App.css';
-
-const socket = io('http://localhost:8081');
+const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3000';
+const socket = io('http://localhost:3000');
 
 function App() {
   const [messages, setMessages] = useState([]);
