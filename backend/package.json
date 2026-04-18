@@ -1,29 +1,25 @@
-
-// backend/package.json
 {
-  "name": "telegram-voice-assistant-backend",
+  "name": "earnhub-backend",
   "version": "1.0.0",
-  "description": "Telegram Voice Assistant Backend",
+  "description": "EarnHub API — Express backend for the EarnHub mini-app",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev":   "nodemon server.js"
   },
   "dependencies": {
-    "axios": "^1.6.0",
-    "bcrypt": "^5.1.1",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "express-rate-limit": "^7.1.5",
-    "helmet": "^7.1.0",
+    "bcryptjs":     "^2.4.3",
+    "cors":         "^2.8.5",
+    "express":      "^4.18.2",
+    "helmet":       "^7.1.0",
     "jsonwebtoken": "^9.0.2",
-    "morgan": "^1.10.0",
-    "openai": "^4.23.2",
-    "socket.io": "^4.7.2",
-    "ws": "^8.14.2",
-    "xss": "^1.0.14"
+    "morgan":       "^1.10.0",
+    "uuid":         "^9.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
